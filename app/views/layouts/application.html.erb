@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Depot</title>
+  <title>Pragmatic Books Online Store</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
-
-<%= yield %>
-
+  <div id="banner">
+    <div id="logo">
+      <%= image_tag("logo.png") %>
+    </div>
+    <div id="title">
+      <%= @page_title || "Pragmatic Bookshelf" %>
+    </div>
+  </div>
+  <div id="columns">
+    <div id="side">
+      <ul>
+        <li><a href="http://www....">HOME</a></li>
+        <li><a href="http://www....">FAQ</a></li>
+        <li><a href="http://www....">NEWS</a></li>
+        <li><a href="http://www....">INQUIRY</a></li>
+      </ul>
+    </div>
+    <div id="main">
+      <%= yield %>
+    </div>
+  </div>
 </body>
 </html>
